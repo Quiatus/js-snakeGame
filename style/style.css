@@ -81,6 +81,7 @@ body, .snake {
 .food {
     background-color: #dedede;
     border: 5px solid #999;
+    border-radius: 10px;
 }
 
 #logo {
