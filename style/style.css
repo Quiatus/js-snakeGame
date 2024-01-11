@@ -79,8 +79,8 @@ body, .snake {
 }
 
 .food {
-    background-color: #dedede;
-    border: 5px solid #999;
+    background-color: red;
+    border: 5px solid darkred;
     border-radius: 10px;
 }
 

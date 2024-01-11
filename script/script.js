@@ -49,10 +49,25 @@
  }
 
  function generateFood() {
-   const x = Math.floor(Math.random() * gridSize) + 1;
-   const y = Math.floor(Math.random() * gridSize) + 1;
-   return{x,y};
- }
+   let testPosition = false;
+
+   while (!testPosition) {
+      let x = Math.floor(Math.random() * gridSize) + 1;
+      let y = Math.floor(Math.random() * gridSize) + 1;
+
+      testPosition = true;
+      
+      for (let i = 0; i < snake.length; i++) {
+         if (x === snake[i].x && y === snake[i].y) {
+            testPosition = false;
+         } 
+      }
+
+      if (testPosition) {
+         return { x,y };
+      }
+   }
+}
 
 function move() {
    const head = { ...snake[0] };
